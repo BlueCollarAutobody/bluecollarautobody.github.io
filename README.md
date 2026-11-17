@@ -6,16 +6,7 @@ Plain HTML/CSS with a little JavaScript. No build step: GitHub Pages serves the 
 
 ## Updating shop details
 
-Phone, email, address and hours all live in **`assets/js/config.js`**. Edit that file and the whole site updates. Anything left as `""` (or an empty hours list) shows as a highlighted placeholder until it's filled in.
-
-```js
-address: "123 Industrial Way, Abbotsford, BC V2T 0A1",
-hours: [
-  ["Mon – Fri", "8:00 am – 5:00 pm"],
-  ["Sat", "By appointment"],
-  ["Sun", "Closed"]
-],
-```
+Phone and email live in **`assets/js/config.js`**. Edit that file and the whole site updates.
 
 ## Adding photos
 

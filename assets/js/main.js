@@ -79,41 +79,6 @@
     }
   });
 
-  // Address / map
-  document.querySelectorAll("[data-map]").forEach(function (a) {
-    if (shop.address) {
-      a.href = shop.mapUrl ||
-        "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(shop.address);
-      a.target = "_blank";
-      a.rel = "noopener";
-    } else {
-      a.removeAttribute("href");
-    }
-  });
-
-  // Hours
-  document.querySelectorAll("[data-hours]").forEach(function (table) {
-    var rows = shop.hours || [];
-    if (!rows.length) {
-      var td = table.querySelector("td");
-      if (td) placeholder(td, td.textContent);
-      return;
-    }
-    var body = document.createElement("tbody");
-    rows.forEach(function (row) {
-      var tr = document.createElement("tr");
-      var d = document.createElement("th");
-      d.scope = "row";
-      d.textContent = row[0];
-      var t = document.createElement("td");
-      t.textContent = row[1];
-      tr.appendChild(d);
-      tr.appendChild(t);
-      body.appendChild(tr);
-    });
-    table.replaceChildren(body);
-  });
-
   // Footer year
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();

@@ -608,16 +608,6 @@ p { margin: 0 0 1rem; }
 .detail dd a { text-decoration: none; }
 .detail dd a[href]:hover { color: var(--hivis-dark); text-decoration: underline; }
 
-.hours { border-collapse: collapse; }
-.hours th,
-.hours td {
-  text-align: left;
-  padding: 0 1.25rem 0.2rem 0;
-  font-weight: 500;
-  vertical-align: top;
-}
-.hours th { font-weight: 600; white-space: nowrap; }
-.hours td.is-placeholder { padding: 0 0.3em; }
 
 @media (max-width: 820px) {
   .estimate-grid { grid-template-columns: 1fr; }
